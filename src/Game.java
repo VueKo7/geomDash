@@ -1,4 +1,5 @@
 import javax.swing.JFrame;
+<<<<<<< HEAD
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -39,12 +40,31 @@ public class Game extends JFrame implements Runnable {
 
         setLocationRelativeTo(null);
         setVisible(true);
+=======
+
+public class Game extends JFrame implements Runnable  {
+    Player player;
+    Mappa mappa;
+    public Game (){
+        player=new Player(100, 100, 20, 20, 2);
+        mappa=new Mappa("mappe/livello1.csv");
+        
+    }
+
+    public void update(){
+
+    }
+
+
+    public void render(){
+>>>>>>> main
 
     }
 
 
 
 
+<<<<<<< HEAD
     
     public void update() {
 
@@ -92,14 +112,48 @@ public class Game extends JFrame implements Runnable {
         graphics.dispose();
         bufferStrategy.show();
     }
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> main
 
 
 
     @Override
     public void run() {
+<<<<<<< HEAD
         
         final double updateRate = 1.0d/60.0d;
 
+=======
+        final double updateRate = 1.0d/60.0d;
+>>>>>>> main
         double accumulator = 0;
         long currentTime, lastUpdate = System.currentTimeMillis();
         //long nextStatTime = System.currentTimeMillis() + 1000;
@@ -113,18 +167,31 @@ public class Game extends JFrame implements Runnable {
             if(accumulator >= updateRate) {
 
                 while(accumulator >= updateRate) {
+<<<<<<< HEAD
                     
                     try {update();}
 
                     catch(Exception e) {System.out.println(e.getMessage());}
                     
+=======
+
+                    try {update();}
+
+                    catch(Exception e) {System.out.println(e.getMessage());}
+
+>>>>>>> main
                     finally {accumulator -= updateRate;}
                 }
                 render();
             }
         }
+<<<<<<< HEAD
       
     }
     
     
+=======
+    }
+    
+>>>>>>> main
 }
