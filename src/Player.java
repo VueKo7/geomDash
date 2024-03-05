@@ -12,7 +12,7 @@ public class Player implements MouseListener {
     public int directionX = -1;
     public int speed;
     private int gravity = 0;
-    private int acceleration = 5;
+    private int acceleration = 10;
     private boolean jump = false;
 
     public Player(int x, int y, int width, int height) {
@@ -48,7 +48,7 @@ public class Player implements MouseListener {
             if(gravity >= 9)
                 directionY = 0;
             
-            if(gravity >= 12) {
+            if(gravity >= 13) {
                 jump = false;
                 gravity = 0;
             }

@@ -7,7 +7,7 @@ import java.awt.image.BufferStrategy;
 
 public class Game extends JFrame implements Runnable {
 
-    final public static int BOARD_WIDTH = 1280;
+    final public static int BOARD_WIDTH = 1580;
     final public static int BOARD_HEIGHT = 720;
     Canvas canvas;
 
@@ -50,7 +50,7 @@ public class Game extends JFrame implements Runnable {
 
         for(Obstacle ostacolo : mappa.ostacoli) {
 
-            ostacolo.core.x += player.directionX*(player.speed+1);
+            ostacolo.core.x += player.directionX*(player.speed+3);
         }
 
         player.update(mappa.ostacoli);
@@ -71,7 +71,7 @@ public class Game extends JFrame implements Runnable {
 
 
         //VISUALIZZAZIONE PLAYER
-        graphics.setColor(Color.WHITE);
+        graphics.setColor(Color.BLUE);
         graphics.fillRect(player.core.x, player.core.y, (int)player.core.getWidth(), (int)player.core.getHeight());
         
 
